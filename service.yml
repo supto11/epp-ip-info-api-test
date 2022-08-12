@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-with-k8s-service
+spec:
+  selector:
+    app: spring-boot-with-k8s
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 9999
+      targetPort: 9999
